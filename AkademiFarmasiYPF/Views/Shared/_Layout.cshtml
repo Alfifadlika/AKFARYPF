@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AkademiFarmasiYPF</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AkademiFarmasiYPF.styles.css" asp-append-version="true" /> *@
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="~/assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/assets/owlcarousel/css/owl.theme.css">
+    <!-- MAGNIFIC CSS -->
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+</head>
+<body body data-spy="scroll" data-offset="80">
+
+    <!-- START PRELOADER -->
+    <div class="preloader">
+        <div class="status">
+            <div class="status-mes"></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+
+    @await Html.PartialAsync("~/Views/Shared/_navbar.cshtml")
+
+    @RenderBody()
+    @await Html.PartialAsync("~/Views/Shared/_footer.cshtml")
+
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> *@
+
+    <!-- Latest jQuery -->
+			<script src="~/assets/js/jquery-1.12.4.min.js"></script>
+		<!-- Latest compiled and minified Bootstrap -->
+			<script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+		<!-- modernizer JS -->		
+			<script src="~/assets/js/modernizr-2.8.3.min.js"></script>														
+		<!-- stellar js -->
+			<script src="~/assets/js/jquery.stellar.min.js"></script>				
+		<!-- owl-carousel min js  -->
+			<script src="~/assets/owlcarousel/js/owl.carousel.min.js"></script>
+		<!-- scrolltopcontrol js -->
+			<script src="~/assets/js/scrolltopcontrol.js"></script>			
+		<!-- form-contact js -->
+			<script src="~/assets/js/form-contact.js"></script>		
+		<!-- MAGNIFICANT JS -->
+			<script src="~/assets/js/jquery.magnific-popup.min.js"></script>			
+		<!-- scripts js -->
+			<script src="~/assets/js/scripts.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
